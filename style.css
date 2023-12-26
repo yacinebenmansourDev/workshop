@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  font-family: sans-serif;
+  --color-gradient-1: #51cf66;
+  --color-gradient-2: #228be6;
+  --bg-color-1: #424651;
+  --bg-color-1-shade: #353841;
+  --bg-color-2: #fff;
+  --bg-color-2-shade: #ddd;
+  --text-color: #222;
+
+  --transition-duration: 0.3s;
+}
+
+.dark-theme {
+  --color-gradient-1: #061828;
+  --color-gradient-2: #212529;
+  --bg-color-1: #69727a;
+  --bg-color-1-shade: #69727ab2;
+  --bg-color-2: #fff;
+  --bg-color-2-shade: #aaa;
+  --text-color: #ccc;
+}
+
+.hero-section {
+  min-height: 100vh;
+
+  padding: 12.8rem;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-gradient-1),
+    var(--color-gradient-2)
+  );
+  color: var(--text-color);
+}
+.container {
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 8.6rem;
+  line-height: 1;
+  margin-bottom: 4rem;
+}
+p {
+  font-size: 3.2rem;
+  line-height: 1.6;
+  margin-bottom: 3.2rem;
+}
+.btn-container {
+  display: flex;
+  gap: 1.6rem;
+}
+.btn {
+  border: none;
+  font-size: 2.4rem;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-main {
+  background-color: var(--bg-color-1);
+  color: var(--bg-color-2);
+}
+.btn-main:hover {
+  background-color: var(--bg-color-1-shade);
+}
+.btn-secondary {
+  background-color: var(--bg-color-2);
+  color: var(--bg-color-1);
+}
+.btn-secondary:hover {
+  background-color: var(--bg-color-2-shade);
+}
+.darkmode-btn {
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+.toggle-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  fill: var(--text-color);
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+.nohide {
+  display: block;
+}
+
+@media (max-width: 1500px) {
+  .hero-section {
+    padding: 9rem;
+  }
+  h1 {
+    font-size: 8.6rem;
+  }
+  p {
+    font-size: 2.8rem;
+    margin-bottom: 3.2rem;
+  }
+}
+
+@media (max-width: 1100px) {
+  .hero-section {
+    padding: 6.4rem;
+  }
+  h1 {
+    text-align: center;
+    font-size: 5.4rem;
+  }
+  p {
+    text-align: center;
+  }
+  .btn-container {
+    justify-content: center;
+  }
+}
+@media (max-width: 650px) {
+  .btn-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
